@@ -601,7 +601,7 @@ Warp Drive → Personal → Rules → Global で設定できる**グローバル
 **実運用での注意:**
 - 「WarpのRulesにGitFlowルールを書いたのに、Claude Codeが守ってくれない」→ それはClaude Codeがグローバルルールを見ていないから
 - GitFlowルール、コミットメッセージ規約、コードレビュー方針など、Claude Codeにも守らせたい内容は**必ず `CLAUDE.md` に書く**
-- tgglobal-standardリポジトリにGitFlowルールがある場合、そのルールを各プロジェクトの `CLAUDE.md` にも転記するか、CLAUDE.md内で参照先として明記する
+- tgglobal-standardリポジトリの `CLAUDE.md` にはGitFlowルールが記載済み。各プロジェクトの `CLAUDE.md` にも同様の内容を転記するか、参照先として明記すること
 
 ### 5.6 MCP（Model Context Protocol）サーバーの設定
 
