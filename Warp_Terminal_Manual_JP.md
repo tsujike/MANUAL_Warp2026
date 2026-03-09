@@ -57,17 +57,25 @@ Warpを開くと、1つのウィンドウの中にタブとペインがある。
 
 ### 2.2 Launch Configurations（起動設定）
 
-プロジェクトごとにウィンドウ・タブ・ペインの構成を保存しておき、ワンクリックで再現できる機能。
+プロジェクトごとにウィンドウ・タブ・ペインの構成を保存しておき、名前で呼び出して再現できる機能。YAMLファイルとして裏で保存されるが、普段はCommand Paletteやメニューから名前で呼び出すだけでよい。
 
-**作成方法（UIから）:**
+**保存方法（現在のレイアウトを保存）:**
 
-1. Command Palette を開く（`Ctrl+Shift+P`）
-2. 「Save New Launch Configuration」と入力
-3. 現在のレイアウト（タブ数、ペイン分割、作業ディレクトリ）が保存される
+1. まず使いたいレイアウト（タブ数、ペイン分割、作業ディレクトリ）を手動で作る
+2. Command Palette を開く（`Ctrl+Shift+P`）
+3. 「Save New Launch Configuration」と入力
+4. 名前をつけて保存
 
-**作成方法（YAMLファイルで手動作成）:**
+**呼び出し方法（保存した設定を開く）:**
 
-ファイルの保存先: `~/.warp/launch_configurations/`
+| 方法 | 操作 |
+|---|---|
+| Command Palette から | `Ctrl+Shift+P` → 「Launch Configuration」と入力 → 一覧から選択 |
+| タブの「+」ボタン右クリック | 表示されるメニューから保存済みの設定を選択 |
+
+**上級者向け: YAMLファイルを手動で作成・編集する場合:**
+
+保存先: `~/.warp/launch_configurations/`
 
 ```yaml
 # 例: my-project.yaml
@@ -89,6 +97,8 @@ windows:
           panes:
             - command: "psql -U myuser -d mydb"
 ```
+
+UIから保存した設定もこのフォルダにYAMLとして保存されるので、後からテキストエディタで細かく調整することもできる。
 
 ### 2.3 プロジェクト管理
 
